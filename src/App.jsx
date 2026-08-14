@@ -6,6 +6,7 @@ import Title from './components/title/title';
 import About from './components/About/About';
 import Campus from './components/Campus/Campus';
 import Testimonials from './components/Testimonials/Testimonials';
+import Contact from './components/Contact/Contact';
 const App = () => {
   return (
     <div>
@@ -32,7 +33,7 @@ const App = () => {
           subTitle="Contact Us"
           Title="Get in Touch"
         />
-
+        <Contact />
         </div>
     </div>
   );
