@@ -39,15 +39,15 @@ const Contact = () => {
   return (
     <div className='contact' id='Contact'>
       <div className="contact-col">
-        <h3>Send us a message<img src={message_icon}/></h3>
+        <h3>Send us a message<img src={message_icon} loading="lazy" decoding="async" /></h3>
         <p>
             Feel free to reach out through contact fromor find our contact infomation below. Your feedback, questions and suggestions are important to us as we strive to provide exceptional services to our university community
 
         </p>
         <ul>
-            <li> <img src={mail_icon}/>contact@deltalogics.dev</li>
-            <li><img src={phone_icon}/>+254742091562</li>
-            <li><img src={location_icon}/>Nairobi, kenya <br/>Monrovia Street</li>
+            <li> <img src={mail_icon} loading="lazy" decoding="async" />contact@deltalogics.dev</li>
+            <li><img src={phone_icon} loading="lazy" decoding="async" />+254742091562</li>
+            <li><img src={location_icon} loading="lazy" decoding="async" />Nairobi, kenya <br/>Monrovia Street</li>
         </ul>
       </div>
       <div className="contact-col">
@@ -60,7 +60,7 @@ const Contact = () => {
 
             <label htmlFor="message">Message</label>
             <textarea name="message" id="message" placeholder='write your message'  required></textarea>
-            <button onClick={handleSubmit} className='btn dark-btn'>Submit<img src={white_arrow}/></button>
+            <button onClick={handleSubmit} className='btn dark-btn'>Submit<img src={white_arrow} loading="lazy" decoding="async" /></button>
         </form>
         <span>{result}</span>
       </div>

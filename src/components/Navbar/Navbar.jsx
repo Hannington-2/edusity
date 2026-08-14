@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <nav className={`container ${sticky  ? "dark-nav" : ''}`}>
        <img src={logo}
-        alt="edusity-logo" className='logo' />
+        alt="edusity-logo" className='logo' loading="lazy" decoding="async" />
 
         <ul className={mobileMenu? '' : "hide-mobile-menu"}>
             <li>
@@ -45,7 +45,7 @@ const Navbar = () => {
 
 
         </ul>
-        <img src={menu_icon} alt=''  className='menu_icon' onClick={toggleMenu}/>
+        <img src={menu_icon} alt=''  className='menu_icon' loading="lazy" decoding="async" onClick={toggleMenu}/>
     </nav>
   );
 }

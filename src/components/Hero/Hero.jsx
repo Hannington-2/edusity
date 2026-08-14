@@ -10,7 +10,7 @@ const Hero = () => {
 
         <p>Our cutting curriculumn is designed to empower students with the knowledge, skills, and experiences needed to excell in the dynamic field of education</p>
 
-        <button className='btn'>Explore more <img src={dark_arrow} alt='' ></img></button>
+        <button className='btn'>Explore more <img src={dark_arrow} alt='' loading="lazy" decoding="async"></img></button>
       </div>
     </div>
     </div>

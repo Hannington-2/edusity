@@ -1,15 +1,17 @@
 // import React from 'react';
-import { useState } from 'react';
+import { Suspense, lazy, useState } from 'react';
 import Navbar from './components/navbar/Navbar';
 import Hero from './components/Hero/hero';
-import Program from './components/Programs/Program';
 import Title from './components/title/title';
-import About from './components/About/About';
-import Campus from './components/Campus/Campus';
-import Testimonials from './components/Testimonials/Testimonials';
-import Contact from './components/Contact/Contact';
-import Footer from './components/Footer/Footer';
-import Videoplayer from './components/Videoplayer/Videoplayer';
+
+const Program = lazy(() => import('./components/Programs/Program'));
+const About = lazy(() => import('./components/About/About'));
+const Campus = lazy(() => import('./components/Campus/Campus'));
+const Testimonials = lazy(() => import('./components/Testimonials/Testimonials'));
+const Contact = lazy(() => import('./components/Contact/Contact'));
+const Footer = lazy(() => import('./components/Footer/Footer'));
+const Videoplayer = lazy(() => import('./components/Videoplayer/Videoplayer'));
+
 const App = () => {
 
   const [playState, setPlayState] = useState(false);
@@ -23,27 +25,40 @@ const App = () => {
           subTitle="Our Programs"
           Title="What We Offer"
         />
-        <Program />
-        <About  setPlayState={setPlayState}/>
+        <Suspense fallback={null}>
+          <Program />
+        </Suspense>
+        <Suspense fallback={null}>
+          <About setPlayState={setPlayState}/>
+        </Suspense>
         <Title 
           subTitle="Gallery"
           Title="Campus Photos"
         />
-        <Campus />
+        <Suspense fallback={null}>
+          <Campus />
+        </Suspense>
         <Title 
           subTitle="TESTIMONIALS"
           Title="What Students Says"
         />
-        <Testimonials />
+        <Suspense fallback={null}>
+          <Testimonials />
+        </Suspense>
         <Title 
           subTitle="Contact Us"
           Title="Get in Touch"
         />
-        <Contact />
-
-        <Footer />
+        <Suspense fallback={null}>
+          <Contact />
+        </Suspense>
+        <Suspense fallback={null}>
+          <Footer />
+        </Suspense>
         </div>
-        <Videoplayer playState={playState} setPlayState={setPlayState} />
+        <Suspense fallback={null}>
+          <Videoplayer playState={playState} setPlayState={setPlayState} />
+        </Suspense>
     </div>
   );
 }

@@ -10,13 +10,13 @@ const Campus = () => {
   return (
     <div  className='campus' id='Campus'>
       <div className="gallery">
-        <img src={gallery_1} alt=""  />
-        <img src={gallery_2} alt=""  />
-        <img src={gallery_3} alt=""  />
-        <img src={gallery_4} alt=""  />
+        <img src={gallery_1} alt="" loading="lazy" decoding="async" />
+        <img src={gallery_2} alt="" loading="lazy" decoding="async" />
+        <img src={gallery_3} alt="" loading="lazy" decoding="async" />
+        <img src={gallery_4} alt="" loading="lazy" decoding="async" />
 
       </div>
-      <button className='btn dark-btn'>See more <img src={white_arrow} alt='' /></button>
+      <button className='btn dark-btn'>See more <img src={white_arrow} alt='' loading="lazy" decoding="async" /></button>
     </div>
   );
 }

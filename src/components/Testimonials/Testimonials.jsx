@@ -29,15 +29,15 @@ const Testimonials = () => {
 
   return (
     <div className='testimonials' id='Testimonials'>
-      <img src={next_icon} alt="" className='next-btn' onClick={slideFoward}/>
-      <img src={back_icon} alt="" className='back-btn' onClick={slideBackward}/>
+      <img src={next_icon} alt="" className='next-btn' loading="lazy" decoding="async" onClick={slideFoward}/>
+      <img src={back_icon} alt="" className='back-btn' loading="lazy" decoding="async" onClick={slideBackward}/>
       <div className="slider">
 
         <ul ref={slider}>
             <li>
                 <div className='slide'>
                 <div className="user_info">
-                    <img src={user_1} alt="" />
+                    <img src={user_1} alt="" loading="lazy" decoding="async" />
                     <div className="">
                         <h3>William Jackson</h3>
                         <span>Edusity, USA</span>
@@ -50,7 +50,7 @@ const Testimonials = () => {
             <li>
                 <div className='slide'>
                 <div className="user_info">
-                    <img src={user_2} alt="" />
+                    <img src={user_2} alt="" loading="lazy" decoding="async" />
                     <div className="">
                         <h3>William Jackson</h3>
                         <span>Edusity, USA</span>
@@ -62,7 +62,7 @@ const Testimonials = () => {
             </li><li>
                 <div className='slide'>
                 <div className="user_info">
-                    <img src={user_3} alt="" />
+                    <img src={user_3} alt="" loading="lazy" decoding="async" />
                     <div className="">
                         <h3>William Jackson</h3>
                         <span>Edusity, USA</span>
@@ -74,7 +74,7 @@ const Testimonials = () => {
             </li><li>
                 <div className='slide'>
                 <div className="user_info">
-                    <img src={user_4} alt="" />
+                    <img src={user_4} alt="" loading="lazy" decoding="async" />
                     <div className="">
                         <h3>William Jackson</h3>
                         <span>Edusity, USA</span>

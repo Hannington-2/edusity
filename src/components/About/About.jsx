@@ -7,8 +7,8 @@ const About = ({setPlayState}) => {
   return (
     <div className='about' id='About'>
       <div className="about-left">
-        <img src={about_img} alt=""  className='about-img' />
-        <img src={play_icon} alt="" className='play-icon' onClick={() =>{setPlayState(true)}} />
+        <img src={about_img} alt="" className='about-img' loading="lazy" decoding="async" />
+        <img src={play_icon} alt="" className='play-icon' loading="lazy" decoding="async" onClick={() =>{setPlayState(true)}} />
 
       </div>
       <div className="about-right">
