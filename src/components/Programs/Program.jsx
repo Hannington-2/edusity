@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import './Program.css';
 import program_1 from '../../assets/program-1.png';
 import program_2 from '../../assets/program-2.png';
@@ -11,7 +11,7 @@ import program_icon_3 from '../../assets/program-icon-3.png';
 
 const Program = () => {
   return (
-    <div className='programs r'>
+    <div className='programs ' id='Program'>
       <div className="program">
         <img src={program_1} alt="" className="program-img" />
         <div className="caption">

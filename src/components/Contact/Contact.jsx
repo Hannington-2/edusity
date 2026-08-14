@@ -1,4 +1,5 @@
 import React from 'react';
+// import { useState } from 'react';
 import  './Contact.css';
 import message_icon from '../../assets/msg-icon.png';
 import mail_icon from '../../assets/mail-icon.png';
@@ -6,10 +7,37 @@ import phone_icon from '../../assets/phone-icon.png';
 import location_icon from '../../assets/location-icon.png';
 import white_arrow from '../../assets/white-arrow.png'
 
+const handleSubmit = () => {
 
+}
 const Contact = () => {
+
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "c34504d9-2f2f-4fb0-9689-45629ca15ab6");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
   return (
-    <div className='contact'>
+    <div className='contact' id='Contact'>
       <div className="contact-col">
         <h3>Send us a message<img src={message_icon}/></h3>
         <p>
@@ -23,15 +51,18 @@ const Contact = () => {
         </ul>
       </div>
       <div className="contact-col">
-        <form>
+        <form onSubmit={onSubmit}>
             <label htmlFor="name">Your name</label>
             <input type="text" name='name' id='name' placeholder='James' required />
+
             <label htmlFor="tel">Phone Number</label>
             <input type="tel" name="phone" id="tel" placeholder='0742091562' required />
+
             <label htmlFor="message">Message</label>
             <textarea name="message" id="message" placeholder='write your message'  required></textarea>
-            <button onClick={} className='btn dark-btn'>Submit<img src={white_arrow}</button>
+            <button onClick={handleSubmit} className='btn dark-btn'>Submit<img src={white_arrow}/></button>
         </form>
+        <span>{result}</span>
       </div>
     </div>
   );

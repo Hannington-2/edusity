@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { useRef } from 'react';
 import './Testimonials.css';
 import next_icon from '../../assets/next-icon.png';
@@ -28,7 +28,7 @@ const Testimonials = () => {
         
 
   return (
-    <div className='testimonials'>
+    <div className='testimonials' id='Testimonials'>
       <img src={next_icon} alt="" className='next-btn' onClick={slideFoward}/>
       <img src={back_icon} alt="" className='back-btn' onClick={slideBackward}/>
       <div className="slider">
@@ -56,8 +56,8 @@ const Testimonials = () => {
                         <span>Edusity, USA</span>
                     </div>
                 </div>   
-                <p><p>Choosing to pursue my degree at Edusity was one of the best decisions I've ever made. The supportive community, state-of-the-art facilities, and commitment to academic excellence have truly exceeded my expectations.</p>
-                </p>
+                <p>Choosing to pursue my degree at Edusity was one of the best decisions I've ever made. The supportive community, state-of-the-art facilities, and commitment to academic excellence have truly exceeded my expectations.</p>
+            
                 </div>
             </li><li>
                 <div className='slide'>

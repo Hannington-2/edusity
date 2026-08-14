@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import './Campus.css';
 import gallery_1 from '../../assets/gallery-1.png';
 import gallery_2 from '../../assets/gallery-2.png'
@@ -8,7 +8,7 @@ import white_arrow from '../../assets/white-arrow.png'
 
 const Campus = () => {
   return (
-    <div  className='campus'>
+    <div  className='campus' id='Campus'>
       <div className="gallery">
         <img src={gallery_1} alt=""  />
         <img src={gallery_2} alt=""  />
